@@ -4,7 +4,7 @@
     <classes>
       <class name="com.medicare.signup.SignUpTests"/>
       <class name="com.medicare.login.LoginTest"/>
-      
+      <class name="com.medicare.addtocart.AddToCartTests"/>
     </classes>
   </test>
 </suite>

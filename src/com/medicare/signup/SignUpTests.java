@@ -56,7 +56,7 @@ public class SignUpTests {
 		String firstNameErrorMessageExpected = "Please enter first name!";
 		WebElement firstNameBlank = driver.findElement(By.id("firstName.errors"));
 		String firstNameErrorMessageActual = firstNameBlank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + firstNameErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(firstNameErrorMessageExpected, firstNameErrorMessageActual);
 
@@ -74,7 +74,7 @@ public class SignUpTests {
 		String lastNameErrorMessageExpected = "Please enter last name!";
 		WebElement lastNameisblank = driver.findElement(By.id("lastName.errors"));
 		String lastNameErrorMessageActual = lastNameisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + lastNameErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(lastNameErrorMessageExpected, lastNameErrorMessageActual);
 
@@ -92,7 +92,7 @@ public class SignUpTests {
 		String emailErrorMessageExpected = "Please enter email address!";
 		WebElement emailisBlank = driver.findElement(By.id("email.errors"));
 		String emailErrorMessageActual = emailisBlank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + emailErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(emailErrorMessageExpected, emailErrorMessageActual);
 	}
@@ -111,7 +111,7 @@ public class SignUpTests {
 	        
 	        WebElement emailalreadytakenmsg = driver.findElement(By.id("email.errors"));
 	        String emailalredytakenactualErrorMsg = emailalreadytakenmsg.getText();
-	        
+	        System.out.println("ExpectedErrorMessage==> " + emailalredytakenexpectedErrorMsg);
 	        driver.close();
 	        Assert.assertEquals(emailalredytakenexpectedErrorMsg, emailalredytakenactualErrorMsg);
 		}
@@ -128,7 +128,7 @@ public class SignUpTests {
 		String contactErrorMessageExpected = "Please enter contact number!";
 		WebElement contactnumberisblank = driver.findElement(By.id("contactNumber.errors"));
 		String contactErrorMessageActual = contactnumberisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + contactErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(contactErrorMessageExpected, contactErrorMessageActual);
 
@@ -146,7 +146,7 @@ public class SignUpTests {
 		String passwordErrorMessageExpected = "Please enter password!";
 		WebElement passwordErrorElement = driver.findElement(By.id("password.errors"));
 		String passwordErrorMessageActual = passwordErrorElement.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + passwordErrorMessageExpected);
 		driver.close();
 
 		Assert.assertEquals(passwordErrorMessageActual, passwordErrorMessageExpected);
@@ -164,7 +164,7 @@ public class SignUpTests {
 		String confirmpasswordErrorMessageExpected = "Password does not match confirm password!";
 		WebElement confirmpasswordnotmatch = driver.findElement(By.id("confirmPassword.errors"));
 		String confirmpasswordErrorMessageActual = confirmpasswordnotmatch.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + confirmpasswordErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(confirmpasswordErrorMessageExpected, confirmpasswordErrorMessageActual);
 	}
@@ -214,7 +214,7 @@ public class SignUpTests {
 		String addressoneErrorMessageExpected = "Please enter address line one!";
 		WebElement addressoneisblank = driver.findElement(By.id("addressLineOne.errors"));
 		String addressoneErrorMessageActual = addressoneisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + addressoneErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(addressoneErrorMessageExpected, addressoneErrorMessageActual);
 
@@ -235,7 +235,7 @@ public class SignUpTests {
 		String addresstwoErrorMessageExpected = "Please enter address line two!";
 		WebElement addresstwoisblank = driver.findElement(By.id("addressLineTwo.errors"));
 		String addresstwoErrorMessageActual = addresstwoisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + addresstwoErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(addresstwoErrorMessageExpected, addresstwoErrorMessageActual);
 
@@ -256,7 +256,7 @@ public class SignUpTests {
 		String cityErrorMessageExpected = "Please enter City!";
 		WebElement cityisblank = driver.findElement(By.id("city.errors"));
 		String cityErrorMessageActual = cityisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + cityErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(cityErrorMessageExpected, cityErrorMessageActual);
 	}
@@ -276,7 +276,7 @@ public class SignUpTests {
 		String postalcodeErrorMessageExpected = "Please enter Postal Code!";
 		WebElement postalcodeisblank = driver.findElement(By.id("postalCode.errors"));
 		String postalcodeErrorMessageActual = postalcodeisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + postalcodeErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(postalcodeErrorMessageExpected, postalcodeErrorMessageActual);
 
@@ -297,7 +297,7 @@ public class SignUpTests {
 		String stateErrorMessageExpected = "Please enter State!";
 		WebElement stateisblank = driver.findElement(By.id("state.errors"));
 		String stateErrorMessageActual = stateisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + stateErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(stateErrorMessageExpected, stateErrorMessageActual);
 	}
@@ -317,7 +317,7 @@ public class SignUpTests {
 		String countryErrorMessageExpected = "Please enter country!";
 		WebElement countryisblank = driver.findElement(By.id("country.errors"));
 		String countryErrorMessageActual = countryisblank.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + countryErrorMessageExpected);
 		driver.close();
 		Assert.assertEquals(countryErrorMessageExpected, countryErrorMessageActual);
 
@@ -443,7 +443,7 @@ public class SignUpTests {
 		String WelcomeMessageExpected = "Welcome!";
 		WebElement WelcomeMessageElement = driver.findElement(By.tagName("h1"));
 		String WelcomeMessageActual = WelcomeMessageElement.getText();
-
+		System.out.println("ExpectedErrorMessage==> " + WelcomeMessageExpected);
 		Assert.assertEquals(WelcomeMessageExpected, WelcomeMessageActual);
 		driver.findElement(By.xpath("//a[@href='/medicare/login']")).click();
 		driver.close();
