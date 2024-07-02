@@ -9,7 +9,7 @@ public class CommonHandler {
 	public WebDriver homePage() {
 	
 	  WebDriver driver = new ChromeDriver();
-	  driver.get("http://localhost:8080/medicare/");
+	  driver.get("http://localhost:9090/medicare/");
 	  driver.manage().window().maximize();
 	  
 	  return driver;
