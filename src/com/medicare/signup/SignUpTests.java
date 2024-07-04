@@ -28,8 +28,7 @@ public class SignUpTests {
 	public void verifySignUpPageWithValidUserDetails() {
 		WebDriver driver = commonHandler.homePage();
 		signUpHandler.clickButtonUsingLinkText(driver, LINK_TEXT_SIGNUP_BUTTON);
-		signUpHandler.setPersonalDetails(driver, FIRST_NAME, LAST_NAME, NEW_EMAIL, CONTACT_NUMBER, PASSWORD,
-				CONFIRM_PASSWORD);
+		signUpHandler.setPersonalDetails(driver, FIRST_NAME, LAST_NAME, NEW_EMAIL, CONTACT_NUMBER, PASSWORD,CONFIRM_PASSWORD);
 		signUpHandler.clickButton(driver, LABEL_NEXT_BUTTON);
 		driver.close();
 	}
@@ -195,8 +194,9 @@ public class SignUpTests {
 		signUpHandler.clickButton(driver, LABEL_NEXT_BUTTON);
 
 		signUpHandler.setAddressDetails(driver, ADDRESS_ONE, ADDRESS_TWO, CITY, POSTAL_CODE, STATE, COUNTRY);
-
-		driver.close();
+		signUpHandler.clickButton(driver, LABEL_CONFIRM_BUTTON);
+		driver.findElement(By.xpath("//a[contains(text(),'Confirm')]")).click();
+		//driver.close();
 	}
 
 	// Verify Sign Up - Address page with address line one is empty
@@ -414,7 +414,7 @@ public class SignUpTests {
 
 	@Test(description = "Verify Edit button on Billing Address")
 	public void verifyEditButtonOnBillingAddress() throws SQLException {
-		databaseOperations.cleanUserDetail(EMAIL);
+		// databaseOperations.cleanUserDetail(EMAIL);
 		// open home page
 		WebDriver driver = commonHandler.homePage();
 

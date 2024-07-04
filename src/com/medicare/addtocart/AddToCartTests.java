@@ -4,6 +4,8 @@ package com.medicare.addtocart;
 
 import static com.medicare.helper.Constants.*;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -78,6 +80,7 @@ public class AddToCartTests {
 		driver.findElement(By.linkText("View Products")).click();
 		driver.findElement(By.xpath("//a[contains(@href,'/medicare/cart/add/1/product')]")).click();
 		driver.findElement(By.xpath("//a[contains(@href,'/medicare/show/all/products')]")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//a[contains(@href,'/medicare/cart/add/2/product')]")).click();
 		driver.findElement(By.xpath("//a[contains(@href,'/medicare/cart/validate')]")).click();
 		driver.findElement(By.linkText("Select")).click();
@@ -86,7 +89,7 @@ public class AddToCartTests {
 		String orderConfirmMsgExpected = "Your Order is Confirmed!!";
 		WebElement orderconfirmElement = driver.findElement(By.cssSelector("h3.text-center"));
 		String orderConfirmMsgActual = orderconfirmElement.getText();
-		driver.close();
+		//driver.close();
 		Assert.assertEquals(orderConfirmMsgExpected, orderConfirmMsgActual);
 		
 	}

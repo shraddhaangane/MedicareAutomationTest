@@ -40,7 +40,7 @@ public void cleanUserDetail(String email) throws SQLException {
 			preparedStatement.setInt(1, userId);
 			preparedStatement.executeUpdate();
 			System.out.println("Record deleted from Order_detail for User_id:" + userId );
-			
+	
 			
 			String deleteAddressQuery= "Delete from Address where user_id=?";
 			preparedStatement = connection.prepareStatement(deleteAddressQuery);
