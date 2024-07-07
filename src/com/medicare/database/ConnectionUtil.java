@@ -22,7 +22,7 @@ public class ConnectionUtil {
 			System.out.println("Test Connection Successfully");
 
 		} catch (Exception e) {
-			System.out.println(e);
+			System.out.println("Error while connecting to database" + e.getMessage());
 		}
 		return connection;
 	}

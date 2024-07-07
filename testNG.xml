@@ -1,9 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Example test run">
-  <test name="Simple Test">
+<suite name="Medicare Automation Test Run">
+  <test name="SignUp Page Test">
     <classes>
       <class name="com.medicare.signup.SignUpTests"/>
+    </classes>
+  </test>
+  <test name="Login Page Test">
+    <classes>
       <class name="com.medicare.login.LoginTest"/>
+    </classes>
+  </test>
+  <test name="AddToCart Page Test">
+    <classes>
       <class name="com.medicare.addtocart.AddToCartTests"/>
     </classes>
   </test>
