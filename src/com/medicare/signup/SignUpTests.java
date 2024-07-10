@@ -371,7 +371,7 @@ public class SignUpTests extends BaseConfigurationTests {
         driver.findElement(By.xpath("//a[@href='/medicare/login']")).click();
     }
 
-    @Test(description = "Verify Edit button on Billing Address", priority = 3)
+    @Test(description = "Verify Edit button on Billing Address", priority = 4)
     public void verifyEditButtonOnBillingAddress() throws SQLException {
         databaseOperations.cleanUserDetails(EMAIL);
 
@@ -393,7 +393,6 @@ public class SignUpTests extends BaseConfigurationTests {
         // find and submit confirm address button
         signUpHandler.clickButton(driver, LABEL_CONFIRM_BUTTON);
         // find and submit confirm address button
-        //signUpHandler.clickButton(driver, LABEL_CONFIRM_BUTTON);
         driver.findElements(By.tagName("a")).get(3).click();
 
         String WelcomeMessageExpected = "Welcome!";
@@ -403,4 +402,5 @@ public class SignUpTests extends BaseConfigurationTests {
         Assert.assertEquals(WelcomeMessageExpected, WelcomeMessageActual);
         driver.findElement(By.xpath("//a[@href='/medicare/login']")).click();
     }
+
 }
