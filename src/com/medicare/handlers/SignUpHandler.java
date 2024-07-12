@@ -16,12 +16,12 @@ public class SignUpHandler {
         driver.findElement(By.id("confirmPassword")).sendKeys(confirmPassword);
     }
 
-    public void setAddressDetails(WebDriver driver, String address_one, String address_two, String city, String postal_code, String state, String contry) {
+    public void setAddressDetails(WebDriver driver, String addressOne, String addressTwo, String city, String postalCode, String state, String contry) {
 
-        driver.findElement(By.id("addressLineOne")).sendKeys(address_one);
-        driver.findElement(By.id("addressLineTwo")).sendKeys(address_two);
+        driver.findElement(By.id("addressLineOne")).sendKeys(addressOne);
+        driver.findElement(By.id("addressLineTwo")).sendKeys(addressTwo);
         driver.findElement(By.id("city")).sendKeys(city);
-        driver.findElement(By.id("postalCode")).sendKeys(postal_code);
+        driver.findElement(By.id("postalCode")).sendKeys(postalCode);
         driver.findElement(By.id("state")).sendKeys(state);
         driver.findElement(By.id("country")).sendKeys(contry);
     }

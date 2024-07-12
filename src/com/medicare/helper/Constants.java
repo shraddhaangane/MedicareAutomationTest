@@ -22,8 +22,11 @@ public class Constants {
     public static final String LABEL_NEXT_BUTTON = "_eventId_billing";
     public static final String LABEL_CONFIRM_BUTTON = "_eventId_confirm";
     public static final String LABEL_BACK_BUTTON = "_eventId_personal";
-
+    public static final String LINK_LOGIN_TEXT = "Login";
+    public static final String LINK_VIEW_PRODUCTS_TEXT = "View Products";
     public static final String LINK_TEXT_SIGNUP_BUTTON = "Sign Up";
+
+    public static final String XPATH_PRODUCT_ONE =  "//a[contains(@href,'/medicare/cart/add/1/product')]";
 
     public static final String CARD_NUMBER = "123456";
     public static final String MONTH = "12";
@@ -31,4 +34,9 @@ public class Constants {
     public static final String CVCODE = "123";
 
     public static final String HOME_PAGE_URL = "http://localhost:9090/medicare/";
+
+    public static final String EXPECTED_MESSAGE_LOGGER_TEXT = "ExpectedErrorMessage : {}";
+    private Constants(){
+
+    }
 }
